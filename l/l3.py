@@ -60,4 +60,9 @@ def containers_differences(container1, container2, keys_to_iterate):
     flatten(list(container1.keys()) + keys_only_in_first),
     flatten(list(container2.keys()) + keys_only_in_second))
 
+#6#7?
 print(value_equals({"a": "c", "b":"c", "d":{"e":"f"}}, {"a": "b", "d":{"f":"e"}, "z":"x"}))
+exec("lambda *a, **k: print(a, k)")
+
+import os
+print(os.system("ls *.*"))
