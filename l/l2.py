@@ -50,3 +50,9 @@ def tuples_lists_from_lists(*input_lists):
     return output_lists
 
 print(tuples_lists_from_lists((1,2,3),(4,5,6),(7,8)))
+
+#9
+def compare(item1):
+    return item1[1][2]
+
+print(sorted([('abc', 'bcd'), ('abc', 'zza')], key=compare))
