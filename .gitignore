@@ -90,3 +90,5 @@ ENV/
 .vscode
 courses
 test
+input3.txt
+output3.txt
