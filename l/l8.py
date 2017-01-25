@@ -17,3 +17,23 @@ def start_listen_log():
         listen_log(s)
 
 # start_listen_log()
+
+#3
+import os
+def listen_show_contents():
+    s = socket.socket()
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s.bind(("127.0.0.1", 1234))
+    while True:
+        s.listen(1)
+        (conn, address) = s.accept()
+        conn.sendall(contents_current_dir().encode())
+        conn.shutdown(socket.SHUT_RDWR)
+
+def contents_current_dir():
+    contents = ""
+    for name in os.listdir():
+        contents += name + "\n"
+    return contents
+
+listen_show_contents()
