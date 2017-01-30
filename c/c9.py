@@ -26,3 +26,21 @@ m2.x = 100
 m.Test = m2.MyFunction 
 print (m.Test(1,2))
 print (m.MyFunction(1,2))
+
+# class Point:
+#     def __init__(self):
+#         self.x = 10
+#         self.y = 10
+
+# p = Point()
+# print(p.x)
+
+#equivalent with
+
+def PointClass__init__(obj):
+    obj["x"] = 10
+    obj["y"] = 10
+Point = {"__init__": PointClass__init__}
+p = dict(Point)
+p["__init__"](p)
+print(p["x"])
